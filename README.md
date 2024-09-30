@@ -7,27 +7,64 @@
 <a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/l/laravel/framework" alt="License"></a>
 </p>
 
-## About Laravel
+## Simple URL Shortener system
 
-Laravel is a web application framework with expressive, elegant syntax. We believe development must be an enjoyable and creative experience to be truly fulfilling. Laravel takes the pain out of development by easing common tasks used in many web projects, such as:
+### Overview
 
-- [Simple, fast routing engine](https://laravel.com/docs/routing).
-- [Powerful dependency injection container](https://laravel.com/docs/container).
-- Multiple back-ends for [session](https://laravel.com/docs/session) and [cache](https://laravel.com/docs/cache) storage.
-- Expressive, intuitive [database ORM](https://laravel.com/docs/eloquent).
-- Database agnostic [schema migrations](https://laravel.com/docs/migrations).
-- [Robust background job processing](https://laravel.com/docs/queues).
-- [Real-time event broadcasting](https://laravel.com/docs/broadcasting).
+my task is building a simple URL shortener application using Laravel. The application should allow users to input long URLs and generate short, shareable links.
 
-Laravel is accessible, powerful, and provides tools required for large, robust applications.
 
-## Learning Laravel
+### Installation
 
-Laravel has the most extensive and thorough [documentation](https://laravel.com/docs) and video tutorial library of all modern web application frameworks, making it a breeze to get started with the framework.
+Follow the steps below to set up the project locally:
 
-You may also try the [Laravel Bootcamp](https://bootcamp.laravel.com), where you will be guided through building a modern Laravel application from scratch.
+1. **Clone the repository**:
+    ```bash
+    git clone https://github.com/masudrana03/url_shortener_system.git
+    ```
 
-If you don't feel like reading, [Laracasts](https://laracasts.com) can help. Laracasts contains thousands of video tutorials on a range of topics including Laravel, modern PHP, unit testing, and JavaScript. Boost your skills by digging into our comprehensive video library.
+2. **Change directory**:
+    ```bash
+    cd url_shortener_system
+    ```
+
+3. **Copy the environment file**:
+    ```bash
+    cp .env.example .env
+    ```
+
+4. **Install dependencies**:
+    ```bash
+    composer install && npm install
+    ```
+
+5. **Vite Compiled**:
+    ```bash
+    npm run build
+    ```
+
+6. **Generate application key**:
+    ```bash
+    php artisan key:generate
+    ```
+
+7. **Run migrations and seed the database**:
+    ```bash
+    php artisan migrate --seed
+    ```
+
+8. **Serve the application**:
+    ```bash
+    php artisan serve
+    ```
+
+### One-Click Setup Command
+
+For a quicker setup, you can run the following command:
+
+```bash
+git clone https://github.com/masudrana03/url_shortener_system.git && cd url_shortener_system && cp .env.example .env && composer install && npm install && npm run build && php artisan key:generate && php artisan migrate --seed && php artisan serve
+```
 
 ## Laravel Sponsors
 

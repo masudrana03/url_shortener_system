@@ -100,7 +100,7 @@
                                                 <a href="{{ route('short-url.stats', $url->slug) }}" class="btn btn-info btn-sm">Stats</a>
                                                 <form action="{{ route('short-url.destroy', $url->slug) }}" method="POST" style="display: inline;">
                                                     @csrf
-                                                    @method('DELETE') <!-- This method directive is necessary for resource routes -->
+                                                    @method('DELETE')
                                                     <button type="submit" class="btn btn-danger btn-sm" onclick="return confirm('Are you sure you want to delete this URL?');">Delete</button>
                                                 </form>
 

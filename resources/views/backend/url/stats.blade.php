@@ -26,7 +26,7 @@
                     <div class="card mb-4">
                         <div class="card-header">
                             <h3 class="card-title">Original URL : <a href="{{ url($shortenedUrl->original_url) }}" target="_blank">{{ Str::limit($shortenedUrl->original_url, 50) }}</a>
-                                </h3>
+                            </h3>
                         </div>
                         <div class="card-body">
                             <table class="table table-bordered">
@@ -41,7 +41,7 @@
                                     @forelse ($shortenedUrl->clicks as $click)
                                         <tr class="align-middle">
                                             <td>{{ $loop->iteration }}</td>
-                                            <td><a href="{{ url($shortenedUrl->short_url) }}" target="_blank">{{ url($shortenedUrl->short_url) }}</a></td>
+                                            <td><a href="{{ route('url.shortener', $shortenedUrl->short_url) }}" target="_blank">{{ route('url.shortener', $shortenedUrl->short_url) }}</a></td>
                                             <td>{{ $click->created_at->format('Y-m-d H:i') }}</td>
                                         </tr>
                                     @empty
@@ -62,14 +62,14 @@
 
 @push('styles')
     <style>
-        /* Custom styles can go here */
+
     </style>
 @endpush
 
 @push('scripts')
     <script>
         $(document).ready(function() {
-            // Additional JavaScript can go here
+
         });
     </script>
 @endpush
