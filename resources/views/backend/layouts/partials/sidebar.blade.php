@@ -13,7 +13,15 @@
                     </a>
                 </li>
 
-              
+
+                <li class="nav-item">
+                    <a href="{{ route('short-url.index') }}" class="nav-link {{ request()->routeIs('short-url.*') ? 'active' : '' }}">
+                        <i class="nav-icon bi bi-pencil-square"></i>
+                        <p>Short Url</p>
+                    </a>
+                </li>
+
+
             </ul> <!--end::Sidebar Menu-->
         </nav>
     </div> <!--end::Sidebar Wrapper-->
